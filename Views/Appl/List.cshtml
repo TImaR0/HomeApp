@@ -1,0 +1,26 @@
+﻿@using HomeApp.Data.Models
+@model IEnumerable<Appl>
+
+@{
+  Layout = null; 
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width" />
+    </head>
+    <body>
+        <h2>Вся Техніка </h2>
+    @{
+        foreach(var appl in Model)
+        {
+            <div>
+            <h2>Модель: @appl.name</h2>
+            <h2>Цена:@appl.price </h2>
+            </div>
+        }
+    }
+    </body>
+</html>
